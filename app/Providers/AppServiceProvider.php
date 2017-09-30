@@ -2,6 +2,7 @@
 
 namespace Gumball\Providers;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // Can this be removed?
+        Schema::defaultStringLength(191);
     }
 }

@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Teachers
+//Route::get('/teachers', 'TeachersController@index')->name('teachers.index');
+Route::get('/teachers/{teacher}', 'TeachersController@show')->name('teachers.show');
+Route::get('/me/edit', 'TeachersController@edit')->name('teachers.edit');
+Route::put('/me', 'TeachersController@update')->name('teachers.update');
