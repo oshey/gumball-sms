@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::resource('students', 'StudentsController');
+
 // Teachers
 //Route::get('/teachers', 'TeachersController@index')->name('teachers.index');
 Route::get('/teachers/{teacher}', 'TeachersController@show')->name('teachers.show');
